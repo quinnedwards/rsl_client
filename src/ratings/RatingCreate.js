@@ -8,7 +8,7 @@ const RatingCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3003/api/user/rating/', {
+        fetch('http://localhost:3002/api/rating/create', {
             method: 'POST',
             body: JSON.stringify({description: description, location: location, user: user}),
             headers: new Headers({
@@ -27,8 +27,8 @@ const RatingCreate = (props) => {
 
     return(
         <>
-            <h3>Rating:</h3>
-            <Form>
+            <h4>Leave a rating!</h4>
+            <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label htmlFor="description"/>
                     <Input name="description" value={description} onChange={(e) => setDescription(e.target.value)} />

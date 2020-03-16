@@ -3,7 +3,7 @@ import {Table, Button} from 'reactstrap';
 
 const RatingTable = (props) => {
     const deleteRating = (rating) => {
-        fetch(`http://localhost:3003/user/rating/${rating.id}`, {
+        fetch(`http://localhost:3002/api/rating/${rating.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -14,6 +14,7 @@ const RatingTable = (props) => {
     }
 
     const ratingMapper = () => {
+        console.log(props.ratings);
         return props.ratings.map((rating, index) => {
             return(
                 <tr key={index}>
@@ -22,8 +23,8 @@ const RatingTable = (props) => {
                     <td>{rating.description}</td>
                     <td>{rating.location}</td>
                     <td>
-                        <Button color="warning">Update</Button>
-                        <Button color="danger">Delete</Button>
+                        <Button color="warning" onClick={() => {props.editUpdateRating(rating); props.updateOn()}}>Update</Button>
+                        <Button color="danger" onClick={() => {deleteRating(rating)}}>Delete</Button>
                     </td>
                 </tr>
             )
@@ -31,7 +32,7 @@ const RatingTable = (props) => {
     }
     return(
         <>
-        <h3>Rating Table</h3>
+        <h3>Ratings</h3>
         <hr />
         <Table striped>
             <thead>
