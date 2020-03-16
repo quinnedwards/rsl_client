@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import APIURL from '../helpers/environment';
 
 const RatingCreate = (props) => {
     const [description, setDescription] = useState('');
@@ -8,7 +9,7 @@ const RatingCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3002/api/rating/create', {
+        fetch(`${APIURL}/api/rating/create`, {
             method: 'POST',
             body: JSON.stringify({description: description, location: location, user: user}),
             headers: new Headers({
