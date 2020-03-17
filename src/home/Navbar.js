@@ -10,12 +10,12 @@ const Sitebar = (props)=> {
     
     return(
         <Navbar color="faded" light expand="md">
-            <NavbarBrand href="/">Record Store Locator</NavbarBrand>
+            <NavbarBrand href="/"></NavbarBrand>
             <NavbarToggler onClick={toggle}/>
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
-                        <Button onClick={props.clickLogout}>Logout</Button>
+                        <Button outline color="secondary" onClick={props.clickLogout}>Logout</Button>
                     </NavItem>
                 </Nav>
             </Collapse>

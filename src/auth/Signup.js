@@ -26,29 +26,28 @@ const Signup = (props) => {
 
     return(
         <div>
-            <h1>Sign Up</h1>
+            <h2>Sign Up</h2>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input onChange={(e) => setFirstName(e.target.value)} name="firstName" value={firstName}/>
+                    <Label htmlFor="firstName"></Label>
+                    <Input onChange={(e) => setFirstName(e.target.value)} name="firstName" value={firstName} placeholder="First Name"/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input onChange={(e) => setLastName(e.target.value)} name="lastName" value={lastName}/>
+                    <Input onChange={(e) => setLastName(e.target.value)} name="lastName" value={lastName} placeholder="Last Name"/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input onChange={(e) => setEmail(e.target.value)} name="email" value={email}/>
+                    {/* <Label htmlFor="email"></Label> */}
+                    <Input onChange={(e) => setEmail(e.target.value)} name="email" value={email} placeholder="Email"/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="username">Username</Label>
-                    <Input onChange={(e) => setUsername(e.target.value)} name="username" value={username}/>
+                    {/* <Label htmlFor="username"></Label> */}
+                    <Input onChange={(e) => setUsername(e.target.value)} name="username" value={username} placeholder="Username"/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="password">Password</Label>
-                    <Input onChange={(e) => setPassword(e.target.value)} name="password" value={password}/>
+                    {/* <Label htmlFor="password"></Label> */}
+                    <Input type="password" onChange={(e) => setPassword(e.target.value)} name="password" value={password} placeholder="Password"/>
                 </FormGroup>
-                <Button type="submit">Signup</Button>
+                <Button className="sign-bttn" color="success" type="submit">Signup</Button>
             </Form>
         </div>
     )

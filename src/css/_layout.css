@@ -1,0 +1,95 @@
+/* body {
+    background-color: black !important;
+}
+
+
+
+.container{
+    max-width: 65% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.auth-left{
+    background-color: black;
+    color: white;
+    max-height: 100vh;
+}
+
+.sidebar {
+    display: flex;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.sidebar-list-styling{
+    width: 10%;
+    background-color: #0f0f0f;
+    color: slategrey !important;
+    text-align: center !important;
+}
+
+.sidebar-list a {
+    color: white;
+    padding: 0;
+}
+
+.sidebar-route{
+    flex: 1;
+    padding: '00px';
+} */
+
+/* body{
+    background-color: #8f4914 !important;
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+h1{
+    text-align: center;
+    color: cornsilk ;
+    text-shadow: 1px 1px 2px #000000;
+    font-family:'Varela Round', sans-serif;
+
+}
+
+.jumbotron {
+    background-color: #8f4914 !important;
+    background-image: url('./wood.jpg');
+    border: 2px solid black;
+    text-shadow: 3px 5px 5px black;
+}
+
+
+h2{
+    text-align: center;
+    color: #f5dac2;
+    text-shadow: 3px 5px 5px black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h3{
+    text-align: center;
+    color: green;
+}
+
+.table{
+    color: brown !important;
+    background-color: #f5dac2 !important;
+}
+
+::placeholder{
+    background-color: #f5dac2 !important;
+    color: green !important;
+    border: 1px solid brown;
+}
+
+.bttn{
+    margin-left: 230px;
+}
+
+.sign-bttn{
+    margin-left: 220px;
+}

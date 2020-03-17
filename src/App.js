@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import './css/main.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import Sitebar from './home/Navbar';
 import Auth from './auth/Auth';
 import RatingIndex from './ratings/RatingIndex';

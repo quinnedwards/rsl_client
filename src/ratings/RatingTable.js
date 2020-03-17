@@ -24,8 +24,8 @@ const RatingTable = (props) => {
                     <td>{rating.description}</td>
                     <td>{rating.location}</td>
                     <td>
-                        <Button color="warning" onClick={() => {props.editUpdateRating(rating); props.updateOn()}}>Update</Button>
-                        <Button color="danger" onClick={() => {deleteRating(rating)}}>Delete</Button>
+                        <Button color="success" onClick={() => {props.editUpdateRating(rating); props.updateOn()}}>Update</Button>
+                        <Button color="secondary" onClick={() => {deleteRating(rating)}}>Delete</Button>
                     </td>
                 </tr>
             )
@@ -35,7 +35,7 @@ const RatingTable = (props) => {
         <>
         <h3>Ratings</h3>
         <hr />
-        <Table striped>
+        <Table hover striped>
             <thead>
                 <tr>
                     <th>#</th>

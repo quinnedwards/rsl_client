@@ -28,21 +28,23 @@ const RatingCreate = (props) => {
 
     return(
         <>
+        <br/>
+        <br />
             <h4>Leave a rating!</h4>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label htmlFor="description"/>
-                    <Input name="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+                    <Input placeholder="Description" name="description" value={description} onChange={(e) => setDescription(e.target.value)} />
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="location"/>
-                    <Input name="location" value={location} onChange={(e) => setLocation(e.target.value)}/>
+                    <Input placeholder="Location" name="location" value={location} onChange={(e) => setLocation(e.target.value)}/>
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="user"/>
-                    <Input name="user" value={user} onChange={(e) => setUser(e.target.value)} />
+                    <Input placeholder="User" name="user" value={user} onChange={(e) => setUser(e.target.value)} />
                 </FormGroup>
-                <Button type="submit">Click to Submit</Button>
+                <Button color="success" type="submit">Click to Submit</Button>
             </Form>
         </>
     )
