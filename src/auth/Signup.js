@@ -27,7 +27,7 @@ const Signup = (props) => {
     return(
         <div>
             <h2>Sign Up</h2>
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit} autoComplete="off">
                 <FormGroup>
                     <Label htmlFor="firstName"></Label>
                     <Input onChange={(e) => setFirstName(e.target.value)} name="firstName" value={firstName} placeholder="First Name"/>

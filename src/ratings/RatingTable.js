@@ -20,7 +20,7 @@ const RatingTable = (props) => {
             return(
                 <tr key={index}>
                     <th scope="row">{rating.id}</th>
-                    <td>{rating.user}</td>
+                    <td>{rating.name}</td>
                     <td>{rating.description}</td>
                     <td>{rating.location}</td>
                     <td>

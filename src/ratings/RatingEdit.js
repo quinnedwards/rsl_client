@@ -5,13 +5,13 @@ import APIURL from '../helpers/environment';
 const RatingEdit = (props) => {
     const [editDesc, setEditDesc] = useState(props.ratingToUpdate.description);
     const [editLoc, setEditLoc] = useState(props.ratingToUpdate.location);
-    const [editUser, setEditUser] = useState(props.ratingToUpdate.user);
+    const [editName, setEditName] = useState(props.ratingToUpdate.name);
 
     const ratingUpdate = (event, rating) => {
         event.preventDefault();
         fetch(`${APIURL}/api/rating/${props.ratingToUpdate.id}`, {
             method: 'PUT',
-            body: JSON.stringify({description: editDesc, location: editLoc}),
+            body: JSON.stringify({description: editDesc, location: editLoc, name: editName}),
             headers: new Headers({
                 'Content-Type': 'application/json',
                 Authorization: props.token
@@ -28,16 +28,16 @@ const RatingEdit = (props) => {
             <ModalBody>
                 <Form onSubmit={ratingUpdate}>
                     <FormGroup>
-                        <Label htmlFor="result">Edit Result:</Label>
-                        <Input name="result" value={editUser} onChange={(e) => setEditUser(e.target.value)}/>
-                    </FormGroup>
-                    <FormGroup>
                         <Label htmlFor="description">Edit Description:</Label>
                         <Input name="description" value={editDesc} onChange={(e) => setEditDesc(e.target.value)}/>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="location">Edit Location:</Label>
                         <Input name="location" value={editLoc} onChange={(e) => setEditLoc(e.target.value)}/>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label htmlFor="name">Edit Name:</Label>
+                        <Input name="name" value={editName} onChange={(e) => setEditName(e.target.value)}/>
                     </FormGroup>
                     <Button type="submit">Update the rating!</Button>
                 </Form>
