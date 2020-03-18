@@ -26,7 +26,7 @@ const RatingEdit = (props) => {
         <Modal isOpen={true}>
             <ModalHeader>Log a Rating</ModalHeader>
             <ModalBody>
-                <Form onSubmit={ratingUpdate}>
+                <Form onSubmit={ratingUpdate} autoComplete="off">
                     <FormGroup>
                         <Label htmlFor="description">Edit Description:</Label>
                         <Input name="description" value={editDesc} onChange={(e) => setEditDesc(e.target.value)}/>
