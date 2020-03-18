@@ -9,7 +9,7 @@ switch (window.location.hostname) {
         //this is the deployed react application
     case 'qe-recordstoreclient.herokuapp.com':
         // this is the full url of your deployed API
-    APIURL = 'qie-recordstorelocator.herokuapp.com'
+    APIURL = 'https://qie-recordstorelocator.herokuapp.com'
 }
 
 export default APIURL;
