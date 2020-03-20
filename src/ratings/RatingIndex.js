@@ -19,8 +19,8 @@ const RatingIndex = (props) => {
                 'Authorization': props.token
             })
         }) .then( res => res.json())
-        .then((logData) => {
-            setRatings(logData.ratings)
+        .then((ratingData) => {
+            setRatings(ratingData.ratings)
         })
     }
 

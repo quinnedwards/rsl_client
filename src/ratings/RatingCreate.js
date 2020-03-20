@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import APIURL from '../helpers/environment';
 
@@ -30,8 +30,8 @@ const RatingCreate = (props) => {
         <>
         <br/>
         <br />
-            <h4>Leave a rating!</h4>
-            <Form onSubmit={handleSubmit}>
+            <h4>Show me your favorite stores!</h4>
+            <Form onSubmit={handleSubmit} autoComplete="off">
                 <FormGroup>
                     <Label htmlFor="description"/>
                     <Input placeholder="Description" name="description" value={description} onChange={(e) => setDescription(e.target.value)} />

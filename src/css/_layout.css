@@ -47,6 +47,7 @@ ul {
 } */
 
 @import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 h1{
     text-align: center;
@@ -73,6 +74,7 @@ h2{
 h3{
     text-align: center;
     color: green;
+    font-family: 'Raleway', sans-serif;
 }
 
 .table{
@@ -93,3 +95,4 @@ h3{
 .sign-bttn{
     margin-left: 220px;
 }
+

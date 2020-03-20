@@ -24,7 +24,7 @@ const RatingEdit = (props) => {
 
     return(
         <Modal isOpen={true}>
-            <ModalHeader>Log a Rating</ModalHeader>
+            <ModalHeader>Log a Store</ModalHeader>
             <ModalBody>
                 <Form onSubmit={ratingUpdate} autoComplete="off">
                     <FormGroup>
@@ -36,10 +36,10 @@ const RatingEdit = (props) => {
                         <Input name="location" value={editLoc} onChange={(e) => setEditLoc(e.target.value)}/>
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="name">Edit Name:</Label>
+                        <Label htmlFor="name">Edit Store Name:</Label>
                         <Input name="name" value={editName} onChange={(e) => setEditName(e.target.value)}/>
                     </FormGroup>
-                    <Button type="submit">Update the rating!</Button>
+                    <Button type="submit">Update the Store!</Button>
                 </Form>
             </ModalBody>
         </Modal>

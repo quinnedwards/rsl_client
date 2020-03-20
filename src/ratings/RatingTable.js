@@ -33,13 +33,13 @@ const RatingTable = (props) => {
     }
     return(
         <>
-        <h3>Ratings</h3>
+        <h3>Stores</h3>
         <hr />
         <Table hover striped>
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>User</th>
+                    <th>Store Name</th>
                     <th>Description</th>
                     <th>Location</th>
                 </tr>
